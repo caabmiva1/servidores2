@@ -3,32 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static',filename='/css/
-    cabecera-styles.css')}}">
-    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/cabecera-styles.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/piepagina-styles.css')}}">
+
+    <title>{%block title%}Document{%endblock%}</title>
 </head>
 <body>
-    <!--cabecera-->
     <header>
-        <h1> My Second Flask Frontend</h1>
+        <h1>My Second Flask Frontend</h1>
         <ul>
             <li>
-                <a href="{{url_for ('home')}}">incio</a>
+                <a href= "{{url_for('home')}}">Inicio </a>   
             </li>
             <li>
-                <a href="{{url_for ('home')}}">productos</a>
+                <a href= "{{url_for('crear_productos')}}">Productos </a>   
             </li>
             <li>
-                <a href="{{url_for ('home')}}">servicios</a>
+                <a href= "{{url_for('home')}}">Servicios </a>   
             </li>
             <li>
-                <a href="{{url_for('home')}}">contactenos</a>
+                <a href= "{{url_for('home')}}">Contactenos </a>   
             </li>
         </ul>
-    </header>
-    <!--la parte principal-->
-    <main></main>
-    <!--pie de pagina-->
-    <footer></footer>
+                </header>
+    <main>
+{%block content%}{%endblock%}
+
+
+
+
+    </main>
+    <footer>
+        <h1>&copy;CAMILA-MINAYA-2024</h1>
+    </footer>
+
+
+    <!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
